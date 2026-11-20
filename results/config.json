@@ -1,0 +1,13 @@
+{
+  "episodes": 500000,
+  "alpha": 0.01,
+  "gamma": 1.0,
+  "eps_start": 1.0,
+  "eps_end": 0.05,
+  "train_seed": 471,
+  "checkpoint_every": 10000,
+  "checkpoint_eval_games": 20000,
+  "checkpoint_eval_seed": 1000,
+  "final_eval_games": 100000,
+  "final_eval_seed": 2026
+}

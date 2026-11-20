@@ -1,0 +1,10 @@
+player_total,dealer_up,usable_ace,learned,optimal,Q*_stand,Q*_hit,cost_of_mistake
+4,A,False,Stand,Hit,-0.667,-0.2531,0.4139
+4,9,False,Stand,Hit,-0.5431,-0.2407,0.3025
+12,4,False,Hit,Stand,-0.2111,-0.2135,0.0025
+13,2,False,Hit,Stand,-0.2928,-0.3078,0.015
+13,3,False,Hit,Stand,-0.2523,-0.2912,0.039
+14,2,False,Hit,Stand,-0.2928,-0.3622,0.0694
+16,10,False,Stand,Hit,-0.5404,-0.5398,0.0006
+18,A,True,Stand,Hit,-0.1002,-0.0929,0.0073
+18,2,True,Hit,Stand,0.1217,0.0629,0.0588
