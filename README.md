@@ -133,7 +133,7 @@ All values live in `blackjack_rl/experiment.py` → `CONFIG`.
 
 | Check | Expected behavior |
 |---|---|
-| Q-update vs. HW4 6.2 hand calculation | Q=4, r=2, max Q′=8, α=0.5, γ=0.75 → target 8, TD error 4, new Q 6 |
+| Q-update vs. hand calculation | 12 vs 4, Hit → 16: Q=−0.20, r=0, max Q′=−0.30, α=0.1, γ=1 → target −0.30, TD error −0.10, new Q −0.21 |
 | Terminal update | Target is r only; the next-state value is ignored |
 | Ace scoring | A+6 = soft 17, A+6+10 = hard 17, A+A = 12 |
 | Dealer rule | Hits 16, stands on soft 17 |

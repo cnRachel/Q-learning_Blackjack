@@ -12,10 +12,15 @@ from blackjack_rl.evaluate import evaluate_policy, make_eval_deals
 from blackjack_rl.optimal import optimal_policy
 
 
-def test_q_update_matches_hw4_part_vi_hand_calculation():
-    """HW4 6.2: Q=4, r=2, max Q'=8, alpha=0.5, gamma=0.75.
-    By hand: target = 2 + 0.75*8 = 8, TD error = 8 - 4 = 4, new Q = 4 + 0.5*4 = 6."""
-    assert q_learning_update(4, 2, 8, alpha=0.5, gamma=0.75) == (8, 4, 6)
+def test_q_update_matches_hand_calculation():
+    """Blackjack example worked by hand: player 12 vs dealer 4 hits and lands on 16.
+    Q(12 vs 4, Hit) = -0.20, r = 0, max Q(16 vs 4) = -0.30, alpha = 0.1, gamma = 1.
+    target = 0 + 1*(-0.30) = -0.30; TD error = -0.30 - (-0.20) = -0.10;
+    new Q = -0.20 + 0.1*(-0.10) = -0.21."""
+    target, td_error, new_q = q_learning_update(-0.20, 0, -0.30, alpha=0.1, gamma=1.0)
+    assert target == pytest.approx(-0.30)
+    assert td_error == pytest.approx(-0.10)
+    assert new_q == pytest.approx(-0.21)
 
 
 def test_terminal_transition_ignores_next_state():
