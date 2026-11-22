@@ -1,4 +1,4 @@
-# CS 471 Final Project — Q-Learning for Blackjack Strategy
+# CS 471 Final Project CHECKPOINT ✅ — Q-Learning for Blackjack Strategy
 
 A tabular **Q-learning** agent learns when to **Hit** or **Stand** in a simplified game of Blackjack by playing simulated hands. After training, the frozen agent is evaluated with **no exploration** on **separate games** and compared against fixed strategies and the exact optimal policy.
 
@@ -92,7 +92,7 @@ The notebook calls `dataset.load_hands("auto")`, which looks for the data in thi
 
 To download manually instead, get the zip from the Kaggle page, unzip it, and put `blkjckhands.csv` in `data/`.
 
-## Simulator rules (Required Revision #3)
+## Simulator rules
 
 | Rule | Choice |
 |---|---|
@@ -120,7 +120,7 @@ Q(s,a) ← Q(s,a) + α [ r + γ · maxₐ′ Q(s′,a′) − Q(s,a) ], with tar
 
 All values live in `blackjack_rl/experiment.py` → `CONFIG`.
 
-## Evaluation protocol (Required Revisions #1 and #2)
+## Evaluation protocol
 
 * **Comparison strategies:** random (lower bound), stand-on-17+ (human rule of thumb), and the exact optimal policy from dynamic programming (upper bound). The optimal policy is a reference only; the Q-learning agent never sees it.
 * **No exploration at test time:** the trained Q-table is frozen into a greedy policy (ε = 0) and is never updated during evaluation (checked by a test).
