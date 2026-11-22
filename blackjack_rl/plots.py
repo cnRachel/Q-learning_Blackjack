@@ -1,4 +1,4 @@
-"""Figures for the checkpoint. Colors: fixed categorical order, validated
+"""Figures for the project. Colors: fixed categorical order, validated
 for color-vision deficiency; every series is also direct-labeled."""
 
 from __future__ import annotations

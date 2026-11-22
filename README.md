@@ -2,7 +2,7 @@
 
 A tabular **Q-learning** agent learns when to **Hit** or **Stand** in a simplified game of Blackjack by playing simulated hands. After training, the frozen agent is evaluated with **no exploration** on **separate games** and compared against fixed strategies and the exact optimal policy.
 
-## Results (checkpoint)
+## Results
 
 All four policies play the **same 100,000 unseen deals** (evaluation seed 2026; training seed 471). Rewards are +1 win, −1 loss, 0 push.
 
